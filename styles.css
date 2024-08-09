@@ -45,6 +45,9 @@ header{
     .logo-holder{
         display: flex;
         padding: 10px;
+        align-items: center;
+        font-weight: 600;
+        color: var(--base-800);
 
         .logo{
             display: flex;
@@ -57,8 +60,39 @@ header{
             width: 64px;
             border-radius: 50%;
         }
+        .logo-text{
+            flex: 1;
+        }
     }
     nav{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap: 5px;
+            li{
+                display: inline-block;
+                a{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    color: var(--base);
+                    &:hover{
+                        background-color: var(--base-100);
+                        border-radius: 10px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 
+    @media (max-width: 786px) {
+        nav{
+            ul{
+                display: none;
+                
+            }
+        }        
     }
 }
